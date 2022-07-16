@@ -1,5 +1,9 @@
 package com.ironhack.bootcamp.exercises.s2.lab104;
 
+import com.ironhack.bootcamp.exercises.s3.Lab106Instructions;
+
+import java.util.Arrays;
+
 /**
  *Instrucciones
  *
@@ -22,6 +26,17 @@ package com.ironhack.bootcamp.exercises.s2.lab104;
 public class Lab104Instructions {
 
     public static void main(String[] args) {
+        int[] arraySrc = {1,3,4,5};
+        Lab104Instructions lab = new Lab104Instructions();
+
+        // Ejercicio 1
+        lab.getDifferenceBetweenBiggestAndLowestItems(arraySrc);
+
+        // ejercicio 2
+        lab.findSmallestAndNextSmallestItem(arraySrc);
+
+        // ejercicio 3
+        lab.calculateEquation(4, 10);
 
     }
 
@@ -61,7 +76,7 @@ public class Lab104Instructions {
      * clues: Math has a lot of methods that can be used to do some calculations like n power 2
      */
     public void calculateEquation(int x, int y) {
-
+        Math.pow(2,4);
     }
 
 
