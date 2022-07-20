@@ -1,4 +1,4 @@
-package com.ironhack.bootcamp.exercises.s3;
+package com.ironhack.bootcamp.exercises.s3.lab106;
 
 /**
  * Instrucciones

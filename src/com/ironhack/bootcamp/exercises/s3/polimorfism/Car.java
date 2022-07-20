@@ -25,7 +25,7 @@ public class Car extends Vehicle {
     }
 
     public void startEngine() {
-        System.out.println("starting bike engine boom boom!");
+        System.out.println("starting car engine boom boom!");
     }
 
     public void turnLeft() {

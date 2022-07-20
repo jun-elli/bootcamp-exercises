@@ -1,6 +1,34 @@
 package com.ironhack.bootcamp.exercises.s2;
 
 public class ArrayLoop {
+    private Float saldo;
+
+    public void setSaldo(float nuevoSaldo) throws Exception{
+        if(nuevoSaldo > 1000) {
+            throw new Exception("Saldo no permitodo");
+        } else {
+            this.saldo = nuevoSaldo;
+        }
+    }
+
+    public Float getSaldo() {
+        if (this.saldo == null) {
+            this.saldo = new Float(0);
+        }
+        return this.saldo;
+    }
+
+    public void setPassword(String plainPass) {
+        String encoded = encodePass(plainPass);
+    }
+
+    private String encodePass(String plain) {
+        return plain;
+    }
+
+
+
+
 
     public void execute(int i) {
         int[] srcArray = {1,2,3,4,5};

@@ -1,9 +1,5 @@
 package com.ironhack.bootcamp.exercises.s2.lab104;
 
-import com.ironhack.bootcamp.exercises.s3.Lab106Instructions;
-
-import java.util.Arrays;
-
 /**
  *Instrucciones
  *
@@ -25,19 +21,45 @@ import java.util.Arrays;
  */
 public class Lab104Instructions {
 
+    public static final int N = 2222;
+
+    // public: desde cualquier parte de la app
+    // default: permite acceder dentro del mismo paquete.
+    //
+    Integer y;
+    private Integer n;
+
+    public Lab104Instructions() {}
+
+    public Lab104Instructions(int y, int n) {
+
+        this.y = y;
+        this.n = n;
+    }
+
+
     public static void main(String[] args) {
         int[] arraySrc = {1,3,4,5};
+
         Lab104Instructions lab = new Lab104Instructions();
 
         // Ejercicio 1
-        lab.getDifferenceBetweenBiggestAndLowestItems(arraySrc);
+        getDifferenceBetweenBiggestAndLowestItems(arraySrc);
 
         // ejercicio 2
-        lab.findSmallestAndNextSmallestItem(arraySrc);
+        findSmallestAndNextSmallestItem(arraySrc);
 
         // ejercicio 3
-        lab.calculateEquation(4, 10);
+        calculateEquation(4, 10);
 
+    }
+
+    public void println(int n) {
+        //---
+    }
+
+    public void println(String n) {
+        // System.out.println(n);
     }
 
     /**
@@ -48,7 +70,7 @@ public class Lab104Instructions {
      * @param array input array
      * @return Biggest element - Smallest element
      */
-    public int getDifferenceBetweenBiggestAndLowestItems(int[] array)  {
+    public static int getDifferenceBetweenBiggestAndLowestItems(int[] array)  {
         return 0;
     }
     /**
@@ -64,7 +86,7 @@ public class Lab104Instructions {
      * @param array input array
      * @return Biggest element - Smallest element
      */
-    public void findSmallestAndNextSmallestItem(int[] array) {
+    public static void findSmallestAndNextSmallestItem(int[] array) {
 
     }
 
@@ -75,7 +97,7 @@ public class Lab104Instructions {
      *
      * clues: Math has a lot of methods that can be used to do some calculations like n power 2
      */
-    public void calculateEquation(int x, int y) {
+    public static void calculateEquation(int x, int y) {
         Math.pow(2,4);
     }
 

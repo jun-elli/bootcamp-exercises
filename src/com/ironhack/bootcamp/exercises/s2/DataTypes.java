@@ -3,6 +3,7 @@ package com.ironhack.bootcamp.exercises.s2;
 public class DataTypes {
 
     public void execute(int n) {
+        ArrayLoop al = new ArrayLoop();
         // Fill in this switch structure to run each method based on the method argument n
         // ***** See ArrayLoop for an example ****
         switch (n) {
