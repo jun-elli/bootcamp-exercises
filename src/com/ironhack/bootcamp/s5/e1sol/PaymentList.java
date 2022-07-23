@@ -1,4 +1,5 @@
-package com.ironhack.bootcamp.s5.p1.e1;
+package com.ironhack.bootcamp.s5.e1sol;
+
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,9 +7,15 @@ import java.util.List;
 
 public class PaymentList implements TransactionList {
     private List<Transaction> transactions;
+    private Account account;
 
     public PaymentList() {
         this.transactions = new ArrayList<>();
+        this.account = new Account();
+    }
+
+    public String getAccountNumber() {
+        return this.account.getAccountNumber();
     }
 
     @Override
@@ -18,6 +25,7 @@ public class PaymentList implements TransactionList {
 
     @Override
     public void addTransaction(Transaction transaction) {
+        this.updateAccountBalance(transaction.getAmount());
         this.transactions.add(transaction);
     }
 
@@ -36,14 +44,13 @@ public class PaymentList implements TransactionList {
         return this.transactions;
     }
 
-    public void increaseTransactionAmount(Transaction transaction, BigDecimal amountIncrease){
-        transaction.setAmount(transaction.getAmount().add(amountIncrease));
+    @Override
+    public BigDecimal getBalance() {
+        return this.account.getBalance();
     }
 
-    public void increaseLastTransactionAmount(BigDecimal amountIncrease){
-        if (this.transactions.size() > 0) {
-            Transaction transaction = this.transactions.get(this.transactions.size()-1);
-            this.increaseTransactionAmount(transaction, amountIncrease);
-        }
+    private void updateAccountBalance(BigDecimal amount) {
+        BigDecimal balance = this.account.getBalance();
+        this.account.setBalance(balance.add(amount));
     }
 }

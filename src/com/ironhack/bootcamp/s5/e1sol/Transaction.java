@@ -1,4 +1,4 @@
-package com.ironhack.bootcamp.s5.p1.e1;
+package com.ironhack.bootcamp.s5.e1sol;
 import java.math.BigDecimal;
 import java.util.Date;
 
