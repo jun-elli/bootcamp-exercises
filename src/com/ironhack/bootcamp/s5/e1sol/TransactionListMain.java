@@ -15,6 +15,10 @@ import java.util.Date;
  * Implement the interface in a class called PaymentList.
  * PaymentList should have an ArrayList property that contains all Transactions.
  * It should implement all methods from the interface.
+ *
+ * This implementation also has a Banking engine that handles TransactionList as clients, each transactionList is a composition
+ * of a list of transactions and an account to which the transactions are aimed.
+ * The banking engine could have another TransactionList implementation than PaymentList.
  */
 public class TransactionListMain {
 
