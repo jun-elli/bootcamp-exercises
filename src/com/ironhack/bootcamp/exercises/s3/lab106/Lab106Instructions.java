@@ -24,34 +24,4 @@ public class Lab106Instructions {
 
     }
 
-    public static void balance(int[] arr, int num){
-
-       /*
-        hasta que El sumatorio (arr) >= num
-        encontrar el menor item y sumar
-        */
-        int sumatorio = 0;
-        while (sumatorio < num) {
-            sumatorio = sumaArray(arr);
-            if (sumatorio < num) {
-                arr = incrementaMinimoItem(arr);
-            }
-        }
-    }
-
-    public static int sumaArray(int[] arr) {
-        int suma = 0;
-        for (int i: arr) {
-            suma += i;
-        }
-        return suma;
-    }
-
-    public static int[] incrementaMinimoItem(int[] arr) {
-        int idxMin = 0;
-
-        return arr;
-    }
-
-
 }
