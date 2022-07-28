@@ -24,7 +24,6 @@ public class MathLibraryTest {
     @Test
     @DisplayName("Test it is able to add two numbers")
     public void add_twoPositiveInts_Summed() {
-        MathLibrary math = new MathLibrary();
         assertEquals(2, math.add(1, 1));
         assertEquals(18, math.add(3, 15));
         assertEquals(298, math.add(152, 146));
@@ -42,6 +41,7 @@ public class MathLibraryTest {
         assertEquals(100, math.sumList(intList3));
     }
 
+    /*
     @Test
     @DisplayName("List of negative ints should be summed")
     public void sumList_negativeInts_Sum() {
@@ -63,5 +63,7 @@ public class MathLibraryTest {
         assertEquals(-1673, math.sumList(intList2));
         assertEquals(4, math.sumList(intList3));
     }
+
+     */
 
 }

@@ -5,7 +5,7 @@ import java.util.List;
 public class MathLibrary {
 
     public int add(int num1, int num2) {
-        return 0;
+        return num1 + num2;
     }
 
     // Method to create array of a specified length
