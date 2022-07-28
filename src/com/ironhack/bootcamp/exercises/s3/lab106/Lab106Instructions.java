@@ -1,5 +1,7 @@
 package com.ironhack.bootcamp.exercises.s3.lab106;
 
+import com.ironhack.bootcamp.exercises.s2.lab104.Lab104Instructions;
+
 /**
  * Instrucciones
  *
@@ -18,4 +20,38 @@ package com.ironhack.bootcamp.exercises.s3.lab106;
  * Escriba un programa que cree 10 Empleados e imprima todas las propiedades en un archivo llamado employees.txt.
  */
 public class Lab106Instructions {
+    public static void main(String[] args) {
+
+    }
+
+    public static void balance(int[] arr, int num){
+
+       /*
+        hasta que El sumatorio (arr) >= num
+        encontrar el menor item y sumar
+        */
+        int sumatorio = 0;
+        while (sumatorio < num) {
+            sumatorio = sumaArray(arr);
+            if (sumatorio < num) {
+                arr = incrementaMinimoItem(arr);
+            }
+        }
+    }
+
+    public static int sumaArray(int[] arr) {
+        int suma = 0;
+        for (int i: arr) {
+            suma += i;
+        }
+        return suma;
+    }
+
+    public static int[] incrementaMinimoItem(int[] arr) {
+        int idxMin = 0;
+
+        return arr;
+    }
+
+
 }

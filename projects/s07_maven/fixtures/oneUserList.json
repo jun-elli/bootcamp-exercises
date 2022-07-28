@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Marissa Rogers",
+    "email": "marissarogers@digiprint.com",
+    "tags": [
+      "non",
+      "nulla"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mccall Arnold",
+        "email": "mccallarnold@digiprint.com"
+      },
+      {
+        "id": 1,
+        "name": "Lee Joyce",
+        "email": "leejoyce@digiprint.com"
+      }
+    ]
+  }
+]
