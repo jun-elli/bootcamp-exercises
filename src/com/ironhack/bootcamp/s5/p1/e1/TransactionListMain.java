@@ -1,6 +1,7 @@
 package com.ironhack.bootcamp.s5.p1.e1;
 
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
@@ -20,7 +21,11 @@ public class TransactionListMain {
 
     public static void main(String[] args) {
         PaymentList paymentList = new PaymentList();
-        Transaction primeraTransaccion = new Transaction("00000001", "00000000002", 2.5, new Date());
+        Transaction primeraTransaccion = new Transaction("00000001", "00000000002", new BigDecimal(2.5), new Date());
         paymentList.addTransaction(primeraTransaccion);
+        paymentList.increaseLastTransactionAmount(new BigDecimal("-3.5"));
+
+        System.out.println(paymentList.getLastTransaction().getAmount());
+
     }
 }

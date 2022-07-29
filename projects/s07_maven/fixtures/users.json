@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "name": "Marissa Rogers",
+    "email": "marissarogers@digiprint.com",
+    "tags": [
+      "non",
+      "nulla"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mccall Arnold",
+        "email": "mccallarnold@digiprint.com"
+      },
+      {
+        "id": 1,
+        "name": "Lee Joyce",
+        "email": "leejoyce@digiprint.com"
+      }
+    ]
+  },
+  {
+    "id": "62e2ad7deddfd87a98b5d5e5",
+    "name": "Vicky Compton",
+    "email": "vickycompton@digiprint.com",
+    "tags": [
+      "id",
+      "ad"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Robertson Harper",
+        "email": "robertsonharper@digiprint.com"
+      },
+      {
+        "id": 1,
+        "name": "Christa Murphy",
+        "email": "christamurphy@digiprint.com"
+      }
+    ]
+  },
+  {
+    "id": "62e2ad7d9bf7cbfeb66ec9a0",
+    "name": "Morin Palmer",
+    "email": "morinpalmer@digiprint.com",
+    "tags": [
+      "irure",
+      "excepteur"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mccullough Gallagher",
+        "email": "mcculloughgallagher@digiprint.com"
+      },
+      {
+        "id": 1,
+        "name": "Aurora Patrick",
+        "email": "aurorapatrick@digiprint.com"
+      }
+    ]
+  },
+  {
+    "id": "62e2ad7d2f68f085b2ce469d",
+    "name": "Castaneda Tran",
+    "email": "castanedatran@digiprint.com",
+    "tags": [
+      "aliquip",
+      "nulla"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Sofia Bryan",
+        "email": "sofiabryan@digiprint.com"
+      },
+      {
+        "id": 1,
+        "name": "Henry White",
+        "email": "henrywhite@digiprint.com"
+      }
+    ]
+  },
+  {
+    "id": "62e2ad7dcfa4b33069627a12",
+    "name": "Ava Jackson",
+    "email": "avajackson@digiprint.com",
+    "tags": [
+      "nulla",
+      "laborum"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mona Rocha",
+        "email": "monarocha@digiprint.com"
+      },
+      {
+        "id": 1,
+        "name": "Roxie Beck",
+        "email": "roxiebeck@digiprint.com"
+      }
+    ]
+  },
+  {
+    "id": "62e2ad7d8dc910b360803930",
+    "name": "Tamera Travis",
+    "email": "tameratravis@digiprint.com",
+    "tags": [
+      "culpa",
+      "eiusmod"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Sophie Delaney",
+        "email": "sophiedelaney@digiprint.com"
+      },
+      {
+        "id": 1,
+        "name": "Klein Bolton",
+        "email": "kleinbolton@digiprint.com"
+      }
+    ]
+  },
+  {
+    "id": "62e2ad7dca53909b14b98b2e",
+    "name": "Nielsen Hughes",
+    "email": "nielsenhughes@digiprint.com",
+    "tags": [
+      "laborum",
+      "id"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Carroll Lowe",
+        "email": "carrolllowe@digiprint.com"
+      },
+      {
+        "id": 1,
+        "name": "Robles Dorsey",
+        "email": "roblesdorsey@digiprint.com"
+      }
+    ]
+  }
+]

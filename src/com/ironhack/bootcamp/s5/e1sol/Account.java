@@ -1,6 +1,7 @@
-package com.ironhack.bootcamp.s5.p1.e1;
+package com.ironhack.bootcamp.s5.e1sol;
 
 import java.math.BigDecimal;
+import java.util.UUID;
 
 /*
     CRUD
@@ -15,7 +16,10 @@ public class Account {
     private BigDecimal balance;
     private String accountNumber;
 
-    public Account(){ }
+    public Account(){
+        this.accountNumber = UUID.randomUUID().toString();
+        this.balance = new BigDecimal("0");
+    }
 
     public Account(String name, String address, BigDecimal balance, String accountNumber) {
         this.name = name;
