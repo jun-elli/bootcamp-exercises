@@ -1,8 +1,8 @@
-[
   {
     "id": 1,
     "name": "Marissa Rogers",
     "email": "marissarogers@digiprint.com",
+    "imageUrl": "",
     "tags": [
       "non",
       "nulla"
@@ -20,4 +20,3 @@
       }
     ]
   }
-]

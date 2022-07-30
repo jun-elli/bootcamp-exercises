@@ -17,7 +17,7 @@ public class UserLoaderTest{
     private UserLoader userLoader;
 
     @BeforeEach
-    public void setUp() {
+    public void init() {
         userLoader = new UserLoader();
     }
 

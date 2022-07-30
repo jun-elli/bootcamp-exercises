@@ -5,6 +5,7 @@ import java.util.List;
 
 public class JsonExample {
     /*
+    Userº
    {
       "id": "YMZ-0000001",
       "total": 30.5,
