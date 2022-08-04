@@ -1,7 +1,6 @@
 package com.ironhack.bootcamp.s11enumshashmaps;
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 
 public class Account {
     private String name;
@@ -9,6 +8,14 @@ public class Account {
     private BigDecimal balance;
     private String accountNumber;
     private Hold hold;
+
+    public Account(String name, String address, BigDecimal balance, String accountNumber, Hold hold) {
+        this.name = name;
+        this.address = address;
+        this.balance = balance;
+        this.accountNumber = accountNumber;
+        this.hold = hold;
+    }
 
     public String getName() {
         return name;
@@ -57,16 +64,3 @@ In your Account class from the BigDecimal activity add a Hold enum.
 The Hold state should indicate if there is a reason for placing a hold on theAccount.
 The potential Hold states are NONE, FRAUD, DELINQUENCY, LOST_STOLEN, LITIGATION_HOLD, FREERIDING.
  */
-
-enum Hold {
-    NONE,
-    FRAUD,
-    DELINQUENCY,
-    LOST_STOLEN,
-    LITIGATION_HOLD,
-    FREERIDING;
-
-    public boolean isOnHold() {
-        return Arrays.asList(FRAUD, DELINQUENCY, LOST_STOLEN, LITIGATION_HOLD, FREERIDING).contains(this);
-    }
-}
