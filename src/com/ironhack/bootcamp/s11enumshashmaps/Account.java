@@ -1,6 +1,7 @@
 package com.ironhack.bootcamp.s11enumshashmaps;
 
 import java.math.BigDecimal;
+import java.util.Arrays;
 
 public class Account {
     private String name;
@@ -64,4 +65,8 @@ enum Hold {
     LOST_STOLEN,
     LITIGATION_HOLD,
     FREERIDING;
+
+    public boolean isOnHold() {
+        return Arrays.asList(FRAUD, DELINQUENCY, LOST_STOLEN, LITIGATION_HOLD, FREERIDING).contains(this);
+    }
 }
