@@ -1,4 +1,4 @@
-package com.ironhack.bootcamp.s10;
+package com.ironhack.bootcamp.s11enumshashmaps;
 
 import java.util.List;
 

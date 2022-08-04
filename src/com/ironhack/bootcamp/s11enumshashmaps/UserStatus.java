@@ -1,7 +1,6 @@
-package com.ironhack.bootcamp.s10;
+package com.ironhack.bootcamp.s11enumshashmaps;
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 public enum UserStatus {

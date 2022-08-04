@@ -1,6 +1,6 @@
-package com.ironhack.bootcamp.s10;
+package com.ironhack.bootcamp.s11enumshashmaps;
 
-public class S10Main {
+public class S11Main {
     public static void main(String[] args) {
         User toni = new User("toni", "mas", "iron-toni", "mystrongpassword", UserStatus.DISABLED);
 //        for (UserStatus status : toni.getStatus()) {
