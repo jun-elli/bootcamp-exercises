@@ -1,13 +1,45 @@
 package com.ironhack.bootcamp.s11enumshashmaps;
 
 import java.math.BigDecimal;
-import java.util.UUID;
+import java.util.*;
 
 public class S11Main {
     public static void main(String[] args) {
         runUserExample();
-
         runAccountExample();
+
+
+        List<User>  users = new ArrayList<>();
+        users.add(new User("toni", "mas", "iron-toni", "mystrongpassword", UserStatus.DISABLED));
+        users.add(new User("inma", "mas1", "iron-toni", "mystrongpassword", UserStatus.DISABLED));
+        users.add(new User("luis", "mas2", "iron-toni", "mystrongpassword", UserStatus.DISABLED));
+        users.add(new User("Joan", "mas3", "iron-toni", "mystrongpassword", UserStatus.DISABLED));
+
+        users.get(0);
+        users.get(users.size()-1);
+
+        users.remove(0);
+
+
+        Map<Integer, User> usersMap = new HashMap<>();
+        usersMap.put(0, new User("toni", "mas", "iron-toni", "mystrongpassword", UserStatus.DISABLED));
+        usersMap.put(1, new User("inma", "mas", "iron-toni", "mystrongpassword", UserStatus.DISABLED));
+        usersMap.put(2, new User("luis", "mas", "iron-toni", "mystrongpassword", UserStatus.DISABLED));
+        usersMap.put(3, new User("joan", "mas", "iron-toni", "mystrongpassword", UserStatus.DISABLED));
+
+        usersMap.get("toni");
+        usersMap.remove("toni");
+
+        for (Integer key : usersMap.keySet()) {
+            User user = usersMap.get(key);
+            System.out.println("User: " + user.getFirstName() +  " last: " + user.getLastName());
+        }
+
+        for (User user: usersMap.values()) {
+            System.out.println("User: " + user.getFirstName() +  " last: " + user.getLastName());
+        }
+
+
     }
 
     private static void runAccountExample() {
