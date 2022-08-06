@@ -1,4 +1,4 @@
-package com.ironhack.bootcamp.s08;
+package com.ironhack.bootcamp.s08.exercises;
 
 import com.ironhack.bootcamp.s08.exercises.Account;
 import com.ironhack.bootcamp.s08.exercises.PaymentProcessor;
