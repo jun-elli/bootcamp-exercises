@@ -30,6 +30,9 @@ CREATE TABLE grade (
     PRIMARY KEY (id)
 );
 
+
+
+
 select c.course_name, s.id from course c, section s where c.course_code = s.course_code;
 select c.course_name, s.id from course c inner join section s on c.course_code = s.course_code;
 
@@ -99,6 +102,10 @@ select distinct(course_code) from section;
 
 -- The query for the following information:
 -- student name and score for all CS103 sections sorted by the score from highest to lowest.
+select student_name, score 
+from grade, section where grade.section_id = section.id and section.course_code = 'CS103';
+
+select student_name, score from grade where grade.section_id LIKE '%CS103$';
 
 -- an alphabetical list of distinct students whose first names fall alphabetically from L to R
 select student_name from grade where student_name > 'J';
@@ -116,3 +123,20 @@ left join grade
 on section.id = grade.section_id;
 
 
+USE irondb;
+
+CREATE TABLE student (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(255),
+    last_name VARCHAR(255)
+);
+
+insert into student (first_name, last_name) values 
+		('James', 'Fields'),
+        ('Maya',  'Charlotte'),
+		('Michael', 'Alcocer'),
+		('Maya', 'Charlotte'),
+		('Tomas', 'Lacroix'),
+		('Sara', 'Bisat'),
+		('James', 'Fields'),
+		('Helena', 'Sepulvida'); 
