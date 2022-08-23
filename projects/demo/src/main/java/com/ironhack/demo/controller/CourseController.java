@@ -1,9 +1,11 @@
 package com.ironhack.demo.controller;
 
 import com.ironhack.demo.model.Course;
-import com.ironhack.demo.repository.CourseRepository;
+import com.ironhack.demo.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -12,10 +14,22 @@ import java.util.List;
 public class CourseController {
 
     @Autowired
-    private CourseRepository courseRepository;
+    private CourseService courseService;
 
-    @GetMapping("/myCourses")
+    @GetMapping("/courses")
     public List<Course> getAllCourses() {
-        return courseRepository.findAll();
+        return courseService.listCourses();
     }
+
+    @GetMapping("/courses/{name}")
+    public Course getCourseByName(@PathVariable(value="name") String name) {
+        return courseService.getCourseByName(name);
+    }
+
+    @GetMapping("/hi")
+    public String hi() {
+        return "hi";
+    }
+
+
 }
