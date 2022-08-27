@@ -1,15 +1,13 @@
 package com.ironhack.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "course")
 public class Course {
 
     @Id
+    @GeneratedValue
     String courseCode;
 
     @Column(name = "course_name")
