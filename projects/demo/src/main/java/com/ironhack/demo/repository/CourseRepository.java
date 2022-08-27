@@ -21,7 +21,7 @@ public interface CourseRepository extends JpaRepository<Course, String>{
     // select * from Course where courseName like :expr
 
 
-    @Query(value = "select * from Course where courseName between :start and :end"/*, nativeQuery = true*/)
+    @Query(value = "from Course where courseName between :start and :end"/*, nativeQuery = true*/)
     List<Course> findCourseByNameBetween(String start, String end);
 
     @Query(value="select hours, courseName from Course where courseCode = :courseCode")

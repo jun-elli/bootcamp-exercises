@@ -15,6 +15,9 @@ public class Course {
     @Column(name = "course_name")
     String courseName;
 
+
+    Integer hours;
+
     public String getCourseCode() {
         return courseCode;
     }
@@ -30,6 +33,15 @@ public class Course {
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
+
+    public Integer getHours() {
+        return hours;
+    }
+
+    public void setHours(Integer hours) {
+        this.hours = hours;
+    }
+
 
     @Override
     public boolean equals(Object obj) {
