@@ -18,26 +18,37 @@ class GradeRepositoryTest {
     @Autowired
     private GradeRepository gradeRepository;
 
+    private Grade grade1;
+    private Grade grade2;
+    private Grade grade3;
+    private Grade grade4;
+
     @BeforeEach
     void setUp() {
         gradeRepository.deleteAll();
-        Grade newGrade = new Grade();
-        newGrade.setScore(101);
-        newGrade.setSectionId(SECTION_ID);
-        newGrade.setStudentName("John Carpenter");
-        gradeRepository.save(newGrade);
+        grade1 = new Grade();
+        grade1.setScore(101);
+        grade1.setSectionId(SECTION_ID);
+        grade1.setStudentName("John Carpenter");
+        gradeRepository.save(grade1);
 
-        Grade newGrade2 = new Grade();
-        newGrade2.setScore(151);
-        newGrade2.setSectionId(SECTION_ID);
-        newGrade2.setStudentName("Danny DeVito");
-        gradeRepository.save(newGrade2);
+        grade2 = new Grade();
+        grade2.setScore(151);
+        grade2.setSectionId(SECTION_ID);
+        grade2.setStudentName("Danny DeVito");
+        gradeRepository.save(grade2);
 
-        Grade newGrade3 = new Grade();
-        newGrade3.setScore(201);
-        newGrade3.setSectionId(SECTION_ID);
-        newGrade3.setStudentName("Quentin Tarantino");
-        gradeRepository.save(newGrade3);
+        grade3 = new Grade();
+        grade3.setScore(201);
+        grade3.setSectionId(SECTION_ID);
+        grade3.setStudentName("Quentin Tarantino");
+        gradeRepository.save(grade3);
+
+        grade4 = new Grade();
+        grade4.setScore(201);
+        grade4.setSectionId("CS101-A");
+        grade4.setStudentName("Quentin Tarantino");
+        gradeRepository.save(grade4);
     }
 
     @AfterEach
@@ -48,21 +59,30 @@ class GradeRepositoryTest {
     @Test
     void findAllByScoreGreaterThan() {
         List<Grade> response = gradeRepository.findAllByScoreGreaterThan(50);
-        assertEquals(3, response.size());
+        assertEquals(4, response.size());
     }
 
     @Test
     void findAllByScoreGreaterThanOrderByStudentName() {
+        List<Grade> response = gradeRepository.findAllByScoreGreaterThanOrderByStudentName(50);
+        assertEquals(4, response.size());
+        assertEquals("Danny DeVito", response.get(0).getStudentName());
+        assertEquals("John Carpenter", response.get(1).getStudentName());
+        assertEquals("Quentin Tarantino", response.get(2).getStudentName());
     }
 
     @Test
     void findAllBySectionIdNot() {
+        List<Grade> response = gradeRepository.findAllBySectionIdNot(SECTION_ID);
+
+        assertEquals(1, response.size());
+        assertEquals("CS101-A", response.get(0).getSectionId());
     }
 
     @Test
     void findAll() {
         Long i = gradeRepository.count();
-        assertEquals(3l, i);
+        assertEquals(4l, i);
     }
 
     @Test
@@ -79,10 +99,7 @@ class GradeRepositoryTest {
 
     @Test
     void delete() {
-        Grade grade = gradeRepository.findById(1).get();
-        gradeRepository.delete(grade);
-
-        assertFalse(gradeRepository.findById(1).isPresent());
-
+        gradeRepository.delete(grade1);
+        assertFalse(gradeRepository.findById(grade1.getId()).isPresent());
     }
 }
