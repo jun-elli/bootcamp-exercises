@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -81,8 +83,14 @@ class GradeRepositoryTest {
 
     @Test
     void findAll() {
-        Long i = gradeRepository.count();
-        assertEquals(4l, i);
+        Iterable<Grade> grades = gradeRepository.findAll();
+        int count = 0;
+
+        for (Grade grade : grades) {
+            count++;
+        }
+
+        assertEquals(4, count);
     }
 
     @Test
@@ -101,5 +109,27 @@ class GradeRepositoryTest {
     void delete() {
         gradeRepository.delete(grade1);
         assertFalse(gradeRepository.findById(grade1.getId()).isPresent());
+    }
+
+    @Test
+    void findAverageScoreBySection() {
+        List<Object[]> result = gradeRepository.findAverageScoreBySection();
+
+        assertEquals(151.0d, result.get(0)[0]);
+        assertEquals(SECTION_ID, result.get(0)[1]);
+
+        assertEquals(201.0d, result.get(1)[0]);
+        assertEquals("CS101-A", result.get(1)[1]);
+    }
+
+    @Test
+    void findMaxScoreBySection() {
+        List<Object[]> result = gradeRepository.findMaxScoreBySection();
+
+        assertEquals(201, result.get(0)[0]);
+        assertEquals("CS101-A", result.get(0)[1]);
+
+        assertEquals(201, result.get(1)[0]);
+        assertEquals(SECTION_ID, result.get(1)[1]);
     }
 }

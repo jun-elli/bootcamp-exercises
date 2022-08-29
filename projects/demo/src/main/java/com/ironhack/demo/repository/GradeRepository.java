@@ -20,6 +20,12 @@ public interface GradeRepository extends CrudRepository<Grade, Integer> {
 
     Grade findBySectionIdAndStudentName(String sectionId, String studentName);
 
+    @Query("SELECT AVG(score), sectionId FROM Grade GROUP BY sectionId ORDER BY AVG(score)")
+    List<Object[]> findAverageScoreBySection();
+
+    @Query("SELECT MAX(score), sectionId FROM Grade GROUP BY sectionId")
+    List<Object[]> findMaxScoreBySection();
+
     void deleteAllBySectionId(String sectionId);
 
     @Query("delete from Grade g where g.sectionId=:sectionId and score>=:score ")
