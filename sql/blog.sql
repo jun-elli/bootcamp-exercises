@@ -22,12 +22,28 @@
    - categoría del supervisor (senior, freaking boss, por encima de Sauron)
 */
 use blog;
+
+drop table if exists author;
+drop table if exists publication;
+drop table if exists author_publications;
+
+
+
 -- Joined tables
 create table publication (
   id int primary key auto_increment,
   title varchar(255),
-  created_date date
+  created_date date,
+  
+  editor_name varchar(255),
+  editor_office varchar(255),
+  editor_category varchar(255),
+  
+  supervisor_name varchar(255),
+  supervisor_office varchar(255),
+  supervisor_category varchar(255)
 );
+
 
 create table book (
   id int primary key auto_increment,
