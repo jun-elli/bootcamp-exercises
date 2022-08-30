@@ -1,6 +1,7 @@
 package com.ironhack.demo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "student")
@@ -22,6 +23,20 @@ public class Student {
     })
     @Embedded
     private Address permanentAddress;
+
+
+    @OneToOne
+    @JoinColumn(name = "house_assignment_id")
+    private HouseAssignment houseAssignment;
+
+
+    @ManyToMany
+    @JoinTable(
+            name="students_casts_spells",
+            joinColumns = { @JoinColumn (name = "student_id")},
+            inverseJoinColumns = {@JoinColumn (name = "spell_id")}
+    )
+    private List<Spell> spells;
 
     // constructors, getters, and setters omitted for brevity
 }

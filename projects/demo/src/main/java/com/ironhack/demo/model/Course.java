@@ -1,6 +1,7 @@
 package com.ironhack.demo.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "course")
@@ -13,6 +14,16 @@ public class Course {
     @Column(name = "course_name")
     String courseName;
 
+    @OneToMany(mappedBy = "course")
+    List<Section> sections;
+
+    public List<Section> getSections() {
+        return sections;
+    }
+
+    public void setSections(List<Section> sections) {
+        this.sections = sections;
+    }
 
     Integer hours;
 
