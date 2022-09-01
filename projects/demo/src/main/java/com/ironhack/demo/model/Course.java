@@ -1,19 +1,31 @@
 package com.ironhack.demo.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "course")
 public class Course {
 
     @Id
+    @GeneratedValue
     String courseCode;
 
     @Column(name = "course_name")
     String courseName;
+
+    @OneToMany(mappedBy = "course")
+    List<Section> sections;
+
+    public List<Section> getSections() {
+        return sections;
+    }
+
+    public void setSections(List<Section> sections) {
+        this.sections = sections;
+    }
+
+    Integer hours;
 
     public String getCourseCode() {
         return courseCode;
@@ -30,6 +42,15 @@ public class Course {
     public void setCourseName(String courseName) {
         this.courseName = courseName;
     }
+
+    public Integer getHours() {
+        return hours;
+    }
+
+    public void setHours(Integer hours) {
+        this.hours = hours;
+    }
+
 
     @Override
     public boolean equals(Object obj) {
