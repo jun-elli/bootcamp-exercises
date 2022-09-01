@@ -1,5 +1,6 @@
 package com.ironhack.demo.repository;
 
+import com.ironhack.demo.dtos.GradeMaxOutput;
 import com.ironhack.demo.model.Grade;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -124,12 +125,19 @@ class GradeRepositoryTest {
 
     @Test
     void findMaxScoreBySection() {
-        List<Object[]> result = gradeRepository.findMaxScoreBySection();
+//        List<Object[]> result = gradeRepository.findMaxScoreBySection();
+//
+//        assertEquals(201, result.get(0)[0]);
+//        assertEquals("CS101-A", result.get(0)[1]);
+//
+//        assertEquals(201, result.get(1)[0]);
+//        assertEquals(SECTION_ID, result.get(1)[1]);
+        List<GradeMaxOutput> result = gradeRepository.findMaxScoreBySection();
 
-        assertEquals(201, result.get(0)[0]);
-        assertEquals("CS101-A", result.get(0)[1]);
+        assertEquals(201, result.get(0).getScore());
+        assertEquals("CS101-A", result.get(0).getSectionId());
 
-        assertEquals(201, result.get(1)[0]);
-        assertEquals(SECTION_ID, result.get(1)[1]);
+        assertEquals(201, result.get(1).getScore());
+        assertEquals(SECTION_ID, result.get(1).getSectionId());
     }
 }

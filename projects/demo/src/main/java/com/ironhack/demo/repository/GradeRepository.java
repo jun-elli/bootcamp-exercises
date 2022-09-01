@@ -1,5 +1,6 @@
 package com.ironhack.demo.repository;
 
+import com.ironhack.demo.dtos.GradeMaxOutput;
 import com.ironhack.demo.model.Grade;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -23,8 +24,8 @@ public interface GradeRepository extends CrudRepository<Grade, Integer> {
     @Query("SELECT AVG(score), sectionId FROM Grade GROUP BY sectionId ORDER BY AVG(score)")
     List<Object[]> findAverageScoreBySection();
 
-    @Query("SELECT MAX(score), sectionId FROM Grade GROUP BY sectionId")
-    List<Object[]> findMaxScoreBySection();
+    @Query("SELECT new com.ironhack.demo.dtos.GradeMaxOutput(MAX(score) as score, sectionId) FROM Grade GROUP BY sectionId")
+    List<GradeMaxOutput> findMaxScoreBySection();
 
     void deleteAllBySectionId(String sectionId);
 

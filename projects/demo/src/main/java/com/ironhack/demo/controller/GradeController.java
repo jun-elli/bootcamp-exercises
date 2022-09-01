@@ -1,5 +1,6 @@
 package com.ironhack.demo.controller;
 
+import com.ironhack.demo.dtos.GradeMaxOutput;
 import com.ironhack.demo.repository.GradeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ public class GradeController {
     private GradeRepository gradeRepository;
 
     @GetMapping("/grades/max")
-    public List<Object[]> getMaxScoreBySection() {
+    public List<GradeMaxOutput> getMaxScoreBySection() {
 
         return gradeRepository.findMaxScoreBySection();
 
