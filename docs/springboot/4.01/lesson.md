@@ -25,9 +25,9 @@ Highlights:
 
 Working with a partner, spend 10 minutes researching and writing your own definitions of:
 
-1. API
-2. HTTP
-3. REST
+1. API  (Application Programming Interfaces)
+2. HTTP [Mozilla http def](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
+3. REST [postman REST def](https://blog.postman.com/rest-api-definition/)
 
 </details>
 
