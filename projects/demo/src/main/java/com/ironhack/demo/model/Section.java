@@ -1,6 +1,8 @@
 package com.ironhack.demo.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,6 +20,7 @@ public class Section { // --> section
 
     private Integer capacity;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "course_code")
     private Course course;
@@ -63,6 +66,7 @@ public class Section { // --> section
         this.capacity = capacity;
     }
 
+    @JsonIgnore
     public Course getCourse() {
         return course;
     }
