@@ -20,8 +20,8 @@ public class Section { // --> section
 
     private Integer capacity;
 
-    @JsonIgnore
-    @ManyToOne
+//    @JsonIgnore // if we want to fully hide this field
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "course_code")
     private Course course;
 
@@ -66,7 +66,6 @@ public class Section { // --> section
         this.capacity = capacity;
     }
 
-    @JsonIgnore
     public Course getCourse() {
         return course;
     }
