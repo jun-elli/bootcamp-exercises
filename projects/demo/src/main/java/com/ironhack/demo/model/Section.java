@@ -1,6 +1,8 @@
 package com.ironhack.demo.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -18,7 +20,8 @@ public class Section { // --> section
 
     private Integer capacity;
 
-    @ManyToOne
+//    @JsonIgnore // if we want to fully hide this field
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "course_code")
     private Course course;
 

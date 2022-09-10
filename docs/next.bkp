@@ -1,0 +1,25 @@
+[4.03 - POST requests and Validation](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.03/lesson.md)
+
+[4.04 - PUT + PATCH requests](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.04/lesson.md)
+
+[4.05 - Exception Handling + MockMVC](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.05/lesson.md)
+
+[4.06 - MockMVC Practice](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.06/lesson.md)
+
+[4.07 - Spring Security](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.07/lesson.md)
+
+[4.08 - Practice Spring Security](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.08/lesson.md)
+
+[4.09 - Assessment and Review](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.09/lesson.md)
+
+[4.10 - Job Prep](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.10/lesson.md)
+
+# Full-Time Schedule
+
+| Week | Day | Part 1 | Part 2 | Lab | 
+| --- | --- | --- | --- | --- | 
+| 4 | 1 | [4.01 - HTTP + REST](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.01/lesson.md) | [4.02 - GET requests + params](https://github.com/ironhack-edu/bootcamp-exercises/blob/master/01-lesson-plans/springboot/4.02/lesson.md) |[Lab 4.02](https://github.com/ironhack-edu/bootcamp-exercises/blob/develop/01-lesson-plans/springboot/4.02/lab.md)| 
+| 4 | 2 | [4.03 - POST requests and Validation](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.03/lesson.md) | [4.04 - PUT + PATCH requests](https://github.com/ironhack-edu/bootcamp-exercises/blob/master/01-lesson-plans/springboot/4.04/lesson.md) |[Lab 4.04](https://github.com/ironhack-edu/bootcamp-exercises/blob/develop/01-lesson-plans/springboot/4.04/lab.md)| 
+| 4 | 3 | [4.05 - Exception Handling + MockMVC](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.05/lesson.md) | [4.06 - MockMVC Practice](https://github.com/ironhack-edu/bootcamp-exercises/blob/master/01-lesson-plans/springboot/4.06/lesson.md) |[Lab 4.06](https://github.com/ironhack-edu/bootcamp-exercises/blob/develop/01-lesson-plans/springboot/4.06/lab.md)| 
+| 4 | 4 | [4.07 - Spring Security](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.07/lesson.md) | [4.08 - Practice Spring Security](https://github.com/ironhack-edu/bootcamp-exercises/blob/master/01-lesson-plans/springboot/4.08/lesson.md) |[Lab 4.08](https://github.com/ironhack-edu/bootcamp-exercises/blob/develop/01-lesson-plans/springboot/4.08/lab.md)| 
+| 4 | 5 | [4.09 - Assessment and Review](https://github.com/amr390/bootcamp-exercises/blob/master/docs/springboot/4.09/lesson.md) | [4.10 - Job Prep](https://github.com/ironhack-edu/bootcamp-exercises/blob/master/01-lesson-plans/springboot/4.10/lesson.md) | No Homework | 
