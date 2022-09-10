@@ -1,6 +1,7 @@
 package com.ironhack.bootcamp.campus.servicios;
 
 import com.ironhack.bootcamp.campus.models.Course;
+import com.ironhack.bootcamp.campus.models.CourseUpdateHoursDto;
 import com.ironhack.bootcamp.campus.repositories.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,8 +29,19 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public Course update(String courseCode, Course requestCourse) {
         Course storedCourse = get(courseCode);
+        if (storedCourse == null) {
+            throw new IllegalArgumentException("Course doesn't exist");
+        }
 
         return courseRepository.save(requestCourse);
+    }
+
+    @Override
+    public Course updateCourseHours(String id, CourseUpdateHoursDto hours) {
+        Course storedCourse = get(id);
+        storedCourse.setHours(hours.getHours());
+
+        return courseRepository.save(storedCourse);
     }
 
     @Override

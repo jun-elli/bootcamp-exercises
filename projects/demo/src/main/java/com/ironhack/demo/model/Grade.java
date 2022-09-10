@@ -2,16 +2,24 @@ package com.ironhack.demo.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Grade {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=  GenerationType.AUTO)
     Integer id;
+    @NotNull
     String studentName;
     String sectionId;
+
+    @Min(0)
+    @Max(100)
     Integer score;
 
     public Integer getId() {

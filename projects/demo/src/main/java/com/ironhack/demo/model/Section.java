@@ -20,7 +20,7 @@ public class Section { // --> section
 
     private Integer capacity;
 
-//    @JsonIgnore // if we want to fully hide this field
+    @JsonIgnore // if we want to fully hide this field
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "course_code")
     private Course course;

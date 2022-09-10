@@ -1,9 +1,6 @@
 package com.ironhack.demo.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Office {
@@ -21,6 +18,9 @@ public class Office {
     private Integer roomNumber;
 
     private String building;
+
+    @OneToOne(mappedBy = "office")
+    private Faculty faculty;
 
     public Integer getId() {
         return id;
