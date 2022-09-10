@@ -4,14 +4,6 @@
 
 > Purpose: The purpose of this lesson is to round out students' ability to create robust REST APIs by covering custom exception creation and controller testing. Students have had a fairly heavy week, so go as slowly as you need to through this. The next lesson is a practice lesson where students will build a REST API from scratch.
 
----
-
-### Additional Resources
-
-If you would like to review these concepts before the class here you have some resources below:
-
-- [Student links](https://github.com/ironhack-edu/java-bootcamp/blob/develop/03-lean-lessons/4-the-controller-layer/exceptions-and-testing/exception-handling-mock-mvc.md)
-
 --- 
 
 
@@ -27,7 +19,6 @@ After this lesson, students will be able to:
 
 ### Exception Handling
 
-> :clock10: 20 min
 
 > Notes
 
@@ -74,8 +65,6 @@ public void update(long id, Product product){
 
 #### :pencil2: Check for Understanding - Exception Handling
 
-> :clock10: 10 min (+ 10 min Review)
-
 <details>
 <summary> Click for Instructions </summary>
 
@@ -85,7 +74,6 @@ Throw a ResponseStatusException with code 404 on your create, update and delete 
 
 #### :pencil2: Check for Understanding - Exception Handling
 
-> :clock10: 15 min (+ 10 min Review)
 
 <details>
 <summary> Click for Instructions </summary>
@@ -130,15 +118,8 @@ public Product findById(Long id) {
 
 </details>
 
----
-
-:coffee: **BREAK**
-
----
 
 ### MockMVC
-
-> :clock10: 20 min
 
 > Reinforce the importance of testing every layer of our application. Remind students of the difference between unit tests and integration tests. This is the first time students are seeing integration tests so take your time ensuring that they understand the role integration tests.
 
@@ -207,7 +188,6 @@ public class CourseControllerTest {
 
 #### :pencil2: Check for Understanding - MockMVC
 
-> :clock10: 20 min (+ 10 min Review)
 
 <details>
 <summary> Click for Instructions</summary>
@@ -220,7 +200,6 @@ Google to determine how to handle path variables and query parameters.
 
 #### :pencil2: Check for Understanding - MockMVC
 
-> :clock10: 20 min (+ 10 min Review)
 
 <details>
 <summary> Click for Instructions</summary>

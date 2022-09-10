@@ -1,16 +1,6 @@
 # Lesson 4.3
 
-### Lesson Duration: 2.5 hours
-
 > Purpose: This lesson covers POST routes and Validation. Validation is a key part of building robust APIs.
-
----
-
-### Additional Resources
-
-If you would like to review these concepts before the class here you have some resources below:
-
-- [Student links](https://github.com/ironhack-edu/java-bootcamp/blob/develop/03-lean-lessons/4-the-controller-layer/add-and-update/post-requests-and-validation.md)
 
 --- 
 
@@ -25,7 +15,6 @@ After this lesson, students will be able to:
 
 ### POST
 
-> :clock10: 10 min
 
 Highlights:
 
@@ -92,13 +81,8 @@ public void addStudent(@RequestBody Student student) {
 
 ---
 
-:coffee: **BREAK**
-
----
-
 ### Validation
 
-> :clock10: 20 min
 
 Highlights:
 
@@ -109,6 +93,9 @@ Highlights:
 <summary> Click for Code Sample </summary>
 
 Walk students through the [Javax Validation Constraint Documentation](https://docs.oracle.com/javaee/7/api/javax/validation/constraints/package-summary.html) then walk through the example below. And demonstrate what happens with a malformed POST request.
+
+[validation springboot](https://reflectoring.io/bean-validation-with-spring-boot/)
+[validation baeldung](https://www.baeldung.com/javax-validation)
 
 First you have to add spring-boot-starter validation on the pom.xml file
 
@@ -174,8 +161,6 @@ public void addProduct(@RequestBody @Valid Product product) {
 </details>
 
 #### :pencil2: Independent Research - Validation
-
-> :clock10: 10 min (+ 10 min Review)
 
 <details>
 <summary> Click for Instructions</summary>

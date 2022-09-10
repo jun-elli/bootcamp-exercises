@@ -1,20 +1,10 @@
 # Lesson 4.4
 
-### Lesson Duration: 2.5 hours
-
 ### Setup
 
 - none
 
 > Purpose: To help students differentiate between PUT and PATCH
-
----
-
-### Additional Resources
-
-If you would like to review these concepts before the class here you have some resources below:
-
-- [Student links](https://github.com/ironhack-edu/java-bootcamp/blob/develop/03-lean-lessons/4-the-controller-layer/add-and-update/put-patch-requests.md)
 
 --- 
 
@@ -28,8 +18,6 @@ After this lesson, students will be able to:
 ---
 
 ### PUT
-
-> :clock10: 20 min
 
 > In this section, we'll introduce the service layer. Students should be familiar with the concept of a service Layer, but this is the first chance to actually implement a service.
 
@@ -63,8 +51,6 @@ public void update(long id, Product product) {
 
 #### :pencil2: Check for Understanding - PUT
 
-> :clock10: 20 min (+ 10 min Review)
-
 <details>
 <summary> Click for Instructions </summary>
 
@@ -95,13 +81,7 @@ public void update(int id, Student student) {
 
 ---
 
-:coffee: **BREAK**
-
----
-
 #### :pencil2: Independent Learning - PATCH
-
-> :clock10: 10 min (+ 10 min Review)
 
 <details>
 <summary> Click for Code Sample </summary>
@@ -114,8 +94,6 @@ After reading some articles, provide an example of when PUT is the best option a
 </details>
 
 ### PATCH
-
-> :clock10: 20 min
 
 Highlights:
 
@@ -175,8 +153,6 @@ public class Product {
 </details>
 
 #### :pencil2: Check for Understanding - PATCH
-
-> :clock10: 20 min (+ 10 min Review)
 
 <details>
 <summary> Click for Instructions </summary>
