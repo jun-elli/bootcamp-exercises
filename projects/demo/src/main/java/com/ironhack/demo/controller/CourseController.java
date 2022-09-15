@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RestController
@@ -38,7 +40,7 @@ public class CourseController {
 
     @GetMapping("/courses/containing")
     //http://localhost:8080/courses/containing?text=Databases
-    public List<Course> getCourseContaining(@RequestParam(value="text") String text) {
+    public List<Course> getCourseContaining(@RequestParam(value="text") @Valid @NotNull String text) {
         return courseRepository.findByCourseNameContaining(text);
     }
 

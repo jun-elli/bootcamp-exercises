@@ -4,7 +4,9 @@ import com.ironhack.bootcamp.campus.models.Course;
 import com.ironhack.bootcamp.campus.models.CourseUpdateHoursDto;
 import com.ironhack.bootcamp.campus.repositories.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -18,7 +20,15 @@ public class CourseServiceImpl implements CourseService {
 
     @Override
     public Course get(String id) {
-        return courseRepository.findById(id).get();
+        Optional<Course> course = courseRepository.findById(id);
+/*        if (course.isPresent()) {
+            return course.get();
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No hemos encontrado el curso con código " + id);
+        }
+        CS101, CS102,
+ */
+        return course.orElseThrow(()-> new ResponseStatusException(HttpStatus.UNAUTHORIZED, "No hemos encontrado el curso con código " + id));
     }
 
     @Override

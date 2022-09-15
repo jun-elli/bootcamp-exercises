@@ -12,6 +12,14 @@ import javax.validation.constraints.Size;
 @Table(name = "course")
 public class Course {
 
+    public Course(String courseCode, String courseName, Integer hours) {
+        this.courseCode = courseCode;
+        this.courseName = courseName;
+        this.hours = hours;
+    }
+
+    public Course() {}
+
     @Id
     @Column(name = "course_code")
     private String courseCode;

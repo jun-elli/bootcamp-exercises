@@ -4,6 +4,7 @@ import com.ironhack.bootcamp.campus.models.Course;
 import com.ironhack.bootcamp.campus.models.CourseUpdateHoursDto;
 import com.ironhack.bootcamp.campus.servicios.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
@@ -27,6 +28,7 @@ public class CourseController {
     }
 
     @PostMapping("/courses")
+    @ResponseStatus(HttpStatus.CREATED)
     public Course create(@Valid @RequestBody Course course) {
         return courseService.save(course);
     }
