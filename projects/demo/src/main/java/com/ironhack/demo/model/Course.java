@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerator;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 // This is to include the course id in the section list when marshalling to a json object
@@ -17,10 +19,12 @@ import java.util.List;
 public class Course {
 
     @Id
-    @GeneratedValue
+    @NotNull
+    @NotEmpty
     String courseCode;
 
     @Column(name = "course_name")
+    @NotNull
     String courseName;
 
     @OneToMany(mappedBy = "course")

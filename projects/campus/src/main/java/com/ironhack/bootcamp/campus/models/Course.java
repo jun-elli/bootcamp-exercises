@@ -4,18 +4,32 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "course")
 public class Course {
+
+    public Course(String courseCode, String courseName, Integer hours) {
+        this.courseCode = courseCode;
+        this.courseName = courseName;
+        this.hours = hours;
+    }
+
+    public Course() {}
 
     @Id
     @Column(name = "course_code")
     private String courseCode;
 
     @Column(name = "course_name")
+    @Size(max = 25)
     private String courseName;
 
+    @NotNull
+    @Max(15)
     private Integer hours;
 
     public String getCourseCode() {

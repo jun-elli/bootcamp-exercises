@@ -1,14 +1,19 @@
 package com.ironhack.demo.controller;
 
 import com.ironhack.demo.model.Course;
+import com.ironhack.demo.model.Section;
 import com.ironhack.demo.repository.CourseRepository;
+import com.ironhack.demo.repository.SectionRepository;
 import com.ironhack.demo.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @RestController
@@ -19,6 +24,9 @@ public class CourseController {
 
     @Autowired
     private CourseRepository courseRepository;
+
+    @Autowired
+    private SectionRepository sectionRepository;
 
     @GetMapping("/courses")
     public List<Course> getAllCourses() {
@@ -32,14 +40,16 @@ public class CourseController {
 
     @GetMapping("/courses/containing")
     //http://localhost:8080/courses/containing?text=Databases
-    public List<Course> getCourseContaining(@RequestParam(value="text") String text) {
+    public List<Course> getCourseContaining(@RequestParam(value="text") @Valid @NotNull String text) {
         return courseRepository.findByCourseNameContaining(text);
     }
 
-    @GetMapping("/hi")
-    public String hi() {
-        return "hi";
+
+    @GetMapping("/courses/{name}/sections")
+    public List<Section> getSectionsByCourseName(@PathVariable String name) {
+        return sectionRepository.findByCourseName(name);
     }
+
 
 
 }

@@ -1,6 +1,8 @@
 package com.ironhack.demo.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 @Entity
@@ -20,16 +22,21 @@ public class Faculty {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer id;
 
+    @NotEmpty
+    @NotNull
     private String firstName;
 
+    @NotEmpty
+    @NotNull
     private String lastName;
 
+    @NotNull
     private String department;
 
     private Boolean tenure;
 
     @OneToOne
-    @JoinColumn(name = "office_id")
+    @JoinColumn(name = "the_office_id")
     Office office;
 
 
