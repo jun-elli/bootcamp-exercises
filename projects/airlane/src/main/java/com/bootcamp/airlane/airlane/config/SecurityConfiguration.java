@@ -10,8 +10,11 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -25,8 +28,25 @@ public class SecurityConfiguration {
 
     @Bean
     public PasswordEncoder passwordEncoder() {
+
+
         return new BCryptPasswordEncoder();
     }
+
+// Configurar un userDetailsService con usuarios en memoria
+//    @Bean
+//    UserDetailsService userDetailsService(BCryptPasswordEncoder bCryptPasswordEncoder) {
+//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+//        manager.createUser(User.withUsername("user")
+//                .password(bCryptPasswordEncoder.encode("userPass"))
+//                .roles("USER")
+//                .build());
+//        manager.createUser(User.withUsername("admin")
+//                .password(bCryptPasswordEncoder.encode("adminPass"))
+//                .roles("USER", "ADMIN")
+//                .build());
+//        return manager;
+//    }
 
     @Bean
     public AuthenticationManager authManager(HttpSecurity http, BCryptPasswordEncoder bCryptPasswordEncoder) throws Exception {
